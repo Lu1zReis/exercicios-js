@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Mexendo com operadores</title>
+    </head>
+    <body>
+
+        <script>
+            // vamos fazer testes com o operador '=', '==' e '==='
+            var a = 5
+            var b = 5
+            var c = '5'
+
+            document.writeln(a == b) // irá retornar 'true'
+
+            document.writeln(b == c) // irá retornar 'true' pois os dois tem a mesma grandeza, e o mesmo valor, mesmo sendo tipos diferentes
+
+            document.writeln(b === c) // irá retornar 'false', pois o operador '===' além de retornar se tem o mesmo valor etc. ele identifica se aquela variavel é idêntica, no caso, se é do mesmo tipo
+
+            document.write('<br>')
+
+            // funciona da mesma forma com o valor "!=" diferente
+            document.writeln(a != b) // 5 == 5 irá retornar false
+            document.writeln(a != c) // 5 != '5' irá retornar false
+            document.writeln(a !== c) // 5 !== '5' irá retornar true
+
+            document.write('<br>')
+
+            // OPERADOR TERNÁRIO
+            // o operador ternário tem a estrutura de teste de valor: condição ? verdadeiro : falso. Podendo usar para vários testes lógicos rápidos.
+            var idade = 18
+            var teste = idade >= 18 ? 'MAIOR' : 'MENOR'
+            document.writeln(teste)
+
+            var x = 4
+            var y = 3
+            var resultado = x % y == 0 ? 'VERDADEIRO' : 'FALSO'
+            document.writeln(resultado)
+        </script>
+
+    </body>
+</html>
