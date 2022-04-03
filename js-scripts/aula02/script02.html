@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta utf8="pt-br">
+        <title>Primeiro arquivo js</title>
+        <style type="text/css">
+            body {
+                background-color: rgb(124, 38, 38);
+                color: azure;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            // essa primeira soma usamos o Number.parseInt para valores inteiros
+            var n1 = Number.parseInt(prompt('Digite um numero'))
+            var n2 = Number.parseInt(prompt('Digite o segundo valor'))
+            var n3 = n1 + n2
+            alert('A soma é ' + n3)
+
+            // esse segundo trecho de código usamos o Number.parseFloat para valores flutuantes
+            var f1 = Number.parseFloat(prompt('Digite um valor float'))
+            var f2 = Number.parseFloat(prompt('Digite o segundo float'))
+            var f3 = f1 + f2
+            alert('A soma é ' + f3)
+            alert('A soma, com pontos flutuantes é ' + f3.toFixed(2)) // toFixed(), é uma função em js para usarmos as casas decimais e passamos quantas casas decimais pelo parâmetro
+            // Podemos usar só o Number, ai o js irá interpretar e analisar se é float ou int
+
+            alert('Concatenação ' + String(n3) + String(f3)) // concatenação
+                                                             // ou var.toString()
+            alert(`Foi inserido os valores ${n1}, ${n2} e ${f1}, ${f2}`)
+        </script>
+    </body>
+</html>
