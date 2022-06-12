@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Identificação</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    Nacionalidade: <input type="text" name="nac" id="nacionalidade">
+
+    <input type="button" value="ver" onclick="showCountry()">
+
+    <div id="res">
+        <p><i>Aqui mostrará o resultado se você é estrangeiro ou Brasileiro...<i></p>
+    </div>
+
+    <script>
+        function showCountry() {
+            // pegando valor do input com .value
+            var pais = document.getElementById('nacionalidade').value
+
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Você nasceu no(a) <strong>${pais}</strong>.</p>`
+
+            if (pais == 'Brasil') {
+                res.innerHTML += '<p>Sua nacionalidade é <strong>brasileira</strong>.</p>'
+            }else {
+                res.innerHTML += '<p>Você é <strong>estrangeiro<strong>.</p>'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>
+            DOM
+        </title>
+        <style>
+            div#area {
+                background-color: green;
+                font: 20pt Arial;
+                color: white;
+                height: 200px;
+                width: 200px;
+                line-height: 200px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="saiu()">
+            interaja
+        </div>
+        <script>
+
+            // eventos em DOM no JS
+
+            // usamos essa var abaixo para pegar o conteúdo dela e assim modificar com as funcões/eventos abaixo dela
+            var ex = window.document.getElementById('area')
+
+            // podemos também fazer os listeners (ouvidores) dentro do JS:
+            
+            // mas aqui não colocamos o 'on' e não precisamos escrever o nome em forma de função
+            /*
+            ex.addEventListener('click', clicar)
+            ex.addEventListener('mouseenter',  entrar)
+            ex.addEventListener('mouseout', saiu)
+            */
+
+            function clicar() {
+                ex.innerText = 'Clicou!'
+                ex.style.background = 'red'
+                ex.style.color = 'white'
+            }
+            function entrar() {
+                ex.innerText = 'Entrou!'
+                ex.style.background = 'yellow'
+                ex.style.color = 'black'
+            }
+            function saiu() {
+                ex.innerText = 'Saiu!'
+                ex.style.background = 'green'
+                ex.style.color = 'white'
+            }
+        </script>
+    </body>
+</html>

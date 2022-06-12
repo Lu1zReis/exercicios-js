@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            background-color: cadetblue;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos em DOM</h1>
+    <p>Aqui vai um teste</p>
+    <p>Segundo teste</p>
+    <div id="msg" onclick="clicou()">Clique em mim</div>
+    <div class="msg">classe ou id</div>
+    <script>
+        /*
+        SELECIONANDO:
+        - getElementsByTagName()
+        - getElementById()
+        - getElementsByName()
+        - getElementsByClassName()
+        - querySelector() & querySelectorAll()
+        */
+
+        // começando os estudos em DOM, entendo sobre a árvore familiar do window (document, location, history)
+
+        // document é aonde está o html (o arquivo atual) e assim podemos manipular pegando esses arquivos, por nome, classe, id, marca. 
+        function clicou(){
+        var p1 = window.document.getElementsByTagName('p')[1] // quando o Elements tem um 's' no fim, provavelmente terá que passar como um array()
+
+        document.write('<br>');
+        
+        window.document.write(p1.innerText) // innerText pega o valor do texto daquela var e o innerHTML pega até se haver atributo dentro de tal tag, ex: <p><strong>texto</strong></p>
+
+        // outro exemplo do dom: usando o document, podemos pegar qualquer atributo do html, até o atributo do body para mudar as cores do fundo
+        var corpo = window.document.body
+        corpo.style.background = ''
+
+        // usando por referência o 'id' e só mudando a cor em js
+        var i = window.document.getElementById('msg')
+        i.style.color = 'green'
+
+        var d = window.document.querySelector('div.msg') // query selector é uma nova maneira de usarmos os atributos do DOM, mas precisamos notar que se quisermos chamar uma classe, temos que colocar um ponto (.) agora se for um id, tem que ser um jogo da velha (#), como foi passado no parâmetro (div.msg) ou (div#msg)
+        d.style.color = 'green'
+        }
+    </script>
+
+</body>
+</html>

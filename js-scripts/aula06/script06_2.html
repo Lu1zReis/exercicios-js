@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Somando Números</title>
+    </head>
+    <body>
+        <h1>Somando Valores</h1>
+        <input type="number" id="num1"> +
+        <input type="number" id="num2">
+        <input id="soma" type="button" value="somar">
+
+        <h3 id="res">Resultado...</h3>
+        <script>
+            // o código abaixo é uma forma de usar o evento já dentro do JS, em vez do 'onclick'
+            var somaFuncao = window.document.getElementById('soma')
+            somaFuncao.addEventListener('click', soma)
+
+            function soma() {
+                var tex1 = window.document.getElementById('num1')
+                var tex2 = window.document.getElementById('num2')
+
+                var res = window.document.getElementById('res')
+
+                var n1 = Number(tex1.value)
+                var n2 = Number(tex2.value)
+                var s = n1 + n2
+
+                res.innerHTML = s
+
+            }
+        </script>
+    </body>
+</html>

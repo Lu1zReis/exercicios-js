@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de velocidade</title>
+</head>
+<body>
+    Velocidade: <input type="number" name="txn" id="value_vel">
+
+    <input type="button" value="verificar" onclick="calc()">
+
+    <div id = 'cond'>
+        <p>km/h...</p>
+    </div>
+
+    <script>
+        function calc() {
+            var vel = document.getElementById('value_vel')
+            vel = Number(vel.value)
+            
+            var res = document.getElementById('cond')
+            res.innerHTML = `<p>Sua velocidade atual é de ${vel} Km/h</p>`
+
+            if (vel > 60) {
+                // temos que colocar uma conjução += para não apagar a mensagem anterior
+                res.innerHTML += '<p>Você foi multado por ultrapassar a velocidade de 60 km/h!</p>'
+            }
+        }
+    </script>
+</body>
+</html>
