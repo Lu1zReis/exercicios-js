@@ -1,0 +1,103 @@
+/* Elementos */
+body {
+    padding-bottom: 100px;
+}
+p {
+    color: green;
+}
+
+/*Classes e id's*/
+/*com o id usamos o # para chamá-lo*/
+#titulo-principal {
+    background-color: aqua;
+}
+
+/*com o id usamos o # para chamá-lo*/
+.meu-paragrafo {
+    background-color: blue;
+    color: white;
+}
+
+/* Todos os elemntos da página, listas */
+* {
+    font-family: Arial;
+}
+
+/* selecionando em Listas */
+p, h1 {
+    border-bottom: 1px solid red;
+}
+
+/* CORES */
+#Cores {
+    background-color: yellow;
+    color: blueviolet;
+}
+.cor {
+    background-color: black;
+    color: pink;
+}
+.hexa {
+    background-color: #333333;
+    color: #16b5ff;
+}
+.rgb {
+    color: rgb(100, 67, 10);
+}
+
+/* Fontes */
+#fontes {
+    background-color: blueviolet;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.serifada {
+    font-family: Georgia;
+}
+.sem-serifa {
+    font-family: 'Helvetica';
+}
+.mono-espacada {
+    font-family: 'Courier New'';
+}
+ 
+/* Links */
+.link {
+    text-decoration: none;
+}
+.link:hover {
+    color: chocolate;
+}
+/*
+.link:visited {
+    color: red;
+}
+*/
+/* Display */
+.emLinha {
+    width: 50px;
+    height: 30px;
+    background-color: #16b5ff;
+    margin: 10px;
+    display: inline-block; /*Esse valor do display inverte o valor padrão do div */
+}
+.bloco {
+    width: 50px;
+    height: 30px;
+    background-color: #16b5ff;
+    margin: 10px;   
+    display: block; /*O valor que passamos no display inverte o padrão do span */
+}
+
+/*fixando um valor*/
+.elemento-fixo {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: red;
+    color: #FFF;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #333333;
+}
