@@ -1,29 +1,66 @@
 const formulario = document.querySelector('.form');
 formulario.addEventListener("submit", dadosIMC);
 
-const resultado = document.querySelector('.resul');
-
 function dadosIMC(evento) {
     evento.preventDefault();
 
-    let peso = (formulario.querySelector('.peso').value);
-    let altu = (formulario.querySelector('.altura').value);
+    let peso = formulario.querySelector('.peso').value;
+    let altu = formulario.querySelector('.altura').value;
+    
+    /* como poderiamsos fazer também
+
+    let peso = evento.target.querySelector('.peso');
+    let altu = evento.target.querySelector('.altura');
+    
+    */
     
     // verificando se o usuario digitou o seu peso em cm
-    if(Number.isInteger(altu)) {
-        altu = altu/100;
-        console.log(altu);
-    }
+    altu = cm(altu);
 
-    const formula = peso / altu ** 2
-
-    // testando os pesos e verificando aonde eles se encaixam
-
+    // calculando
+    const formula = getImeso, altu);kc
 
     // verificando se há algum erro
-    if(!isNaN(formula) && isFinite(formula)) {
-        resultado.innerHTML = `<font style='background-color: blue; color: white;'>${formula}</font>`;
+    const valido = filtro(formula);
+
+    // passando a mensagem
+    if(valido) {
+        setResultado(`Seu IMC é ${formula}`, valido);
     } else {
-        resultado.innerHTML = "<font style='background-color: red;'color='white'>Os dados são inválidos</font>";
+        setResultado(`Dados Inválidos`, valido);
     }
+}
+
+function getImc(peso, altu) {
+    const imc = peso / altu ** 2;
+    return imc.toFixed(2);
+}
+
+function cm(altu) {
+    if(Number.isInteger(altu)) {
+        altu = altu/100;
+    }
+    return altu;
+} 
+
+function filtro(formula) {
+    if(!isNaN(formula) && isFinite(formula)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function setResultado(msg, valido) {
+    const resultado = document.querySelector('.resul');
+    // para limpar a area do form quando o usuario enviar novos dados
+    resultado.innerHTML = '';
+    const p = document.createElement('p');
+    if(valido) {
+        p.classList.add('p-true');
+    } else {
+        p.classList.add('p-false'); 
+    }
+    p.innerHTML = msg;
+    resultado.appendChild(p);
 }

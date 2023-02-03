@@ -50,3 +50,16 @@ form button {
     margin-top: 30px;
     cursor: pointer;
 }
+
+.p-true {
+    background-color: green;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    width: 100%;
+}
+.p-false {
+    background-color: rgb(174, 52, 52);
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
