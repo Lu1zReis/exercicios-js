@@ -18,7 +18,7 @@ function dadosIMC(evento) {
     altu = cm(altu);
 
     // calculando
-    const formula = getImeso, altu);kc
+    const formula = getImc(peso, altu);
 
     // verificando se há algum erro
     const valido = filtro(formula);
